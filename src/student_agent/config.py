@@ -34,3 +34,8 @@ class Settings:
         if errors:
             raise ValueError("; ".join(errors))
         return cls(api_url, team_key, mcp_endpoint, resolved_root)
+        if not mcp_endpoint.startswith(("http://", "https://")):
+            errors.append("MCP_ENDPOINT must be an absolute HTTP(S) URL")
+        if errors:
+            raise ValueError("; ".join(errors))
+        return cls(api_url, team_key, mcp_endpoint, resolved_root)

@@ -34,3 +34,7 @@ dist/*
 .vscode/
 .DS_Store
 Thumbs.db
+
+scratch/
+skills-lock.json
+debug/
